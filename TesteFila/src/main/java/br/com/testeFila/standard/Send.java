@@ -1,4 +1,4 @@
-package br.com.testeFila.TesteFila;
+package br.com.testeFila.standard;
 
 import java.util.HashMap;
 import java.util.Map;

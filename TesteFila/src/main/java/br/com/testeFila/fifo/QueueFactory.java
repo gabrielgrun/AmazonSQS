@@ -10,7 +10,6 @@ public class QueueFactory {
 		return AmazonSQSClientBuilder
 		.standard()
 		.withCredentials(new AWSStaticCredentialsProvider(Credentials.getCredentials()))
-		//.withRegion(Regions.US_EAST_2)
 		.withEndpointConfiguration(new EndpointConfiguration("http://localhost:4566/", "us-east-2"))
 		.build();
 	}

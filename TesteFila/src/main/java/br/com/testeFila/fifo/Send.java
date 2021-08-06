@@ -9,7 +9,7 @@ import com.amazonaws.services.sqs.model.SendMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageResult;
 
 public class Send {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		String queueUrl = "http://localhost:4566/000000000000/testeViaCodigo2.fifo";
 		AmazonSQS sqs = QueueFactory.getQueue();
 		Map<String, MessageAttributeValue> messageAttributes = new HashMap<>();
@@ -34,6 +34,7 @@ public class Send {
 					.withMessageAttributes(messageAttributes);
 			i++;
 			SendMessageResult result = sqs.sendMessage(sendMessageReq);
+			Thread.sleep(1000);
 			System.out.println(result.getMessageId());
 		}
 	}

@@ -16,7 +16,7 @@ public class Read {
 				.withWaitTimeSeconds(1)
 				.withVisibilityTimeout(1)
 				.withMessageAttributeNames("All")
-				.withMaxNumberOfMessages(10);
+				.withMaxNumberOfMessages(1);
 		
 		List<Message> messages = sqs.receiveMessage(receiveRequest).getMessages();
 		
