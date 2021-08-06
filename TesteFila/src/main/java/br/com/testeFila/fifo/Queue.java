@@ -6,7 +6,6 @@ import java.util.Map;
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.model.AmazonSQSException;
 import com.amazonaws.services.sqs.model.CreateQueueRequest;
-import com.amazonaws.services.sqs.model.ListQueuesResult;
 
 public class Queue {
 	public static void main(String[] args) {
@@ -27,8 +26,5 @@ public class Queue {
 		        throw e;
 		    }
 		}
-		
-		ListQueuesResult a  = sqs.listQueues();
-		System.out.println(a.getQueueUrls());
 	}
 }
